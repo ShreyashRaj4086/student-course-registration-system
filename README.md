@@ -44,6 +44,13 @@ Maps instructors to the courses they teach.
 
 ---
 
+## Image Output
+<img width="1193" height="707" alt="WhatsApp Image 2026-06-15 at 7 51 26 PM" src="https://github.com/user-attachments/assets/5f95b9c2-a269-4366-887f-3060509fae21" />
+
+
+---
+
+
 ## SQL Concepts Used
 
 * DDL (Data Definition Language)
