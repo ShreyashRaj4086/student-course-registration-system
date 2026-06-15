@@ -1,0 +1,43 @@
+-- =====================================================
+-- Sample Data
+-- =====================================================
+
+-- Insert student records
+
+INSERT INTO Students VALUES
+(1001,'Harsh Raj','harsh@gmail.com','2023-07-15'),
+(1002,'Aditya Kaur','aditya@gmail.com','2023-07-15'),
+(1003,'Ashlesh','ashlesh@gmail.com','2023-07-15'),
+(1004,'Simran Kaur','simran@gmail.com','2023-07-15');
+
+-- Insert course records
+
+INSERT INTO Courses VALUES
+(1,'Physics',4),
+(2,'Chemistry',4),
+(3,'Python Programming',3),
+(4,'Java Programming',3);
+
+-- Insert instructor records
+
+INSERT INTO Instructors VALUES
+(2341,'Alakh','SCOPE'),
+(2345,'Arun','SCORE'),
+(2346,'Amit','SCOPE'),
+(2347,'Sanya','SCORE');
+
+-- Insert enrollment records
+
+INSERT INTO Enrollments VALUES
+(1221,1001,1,'1st Semester'),
+(1222,1002,2,'2nd Semester'),
+(1223,1003,3,'3rd Semester'),
+(1224,1004,4,'4th Semester');
+
+-- Assign instructors to courses
+
+INSERT INTO Course_Assignments VALUES
+(1,1,2345),
+(2,2,2346),
+(3,3,2347),
+(4,4,2341);

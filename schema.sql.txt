@@ -1,0 +1,59 @@
+-- =====================================================
+-- Academic Management System
+-- Database Schema
+-- Author: Shreyash Raj
+-- =====================================================
+
+-- Students table stores student information
+
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    admission_date DATE
+);
+
+-- Courses table stores available courses
+
+CREATE TABLE Courses (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(100) NOT NULL,
+    credits INT
+);
+
+-- Instructors table stores faculty information
+
+CREATE TABLE Instructors (
+    instructor_id INT PRIMARY KEY,
+    instructor_name VARCHAR(100) NOT NULL,
+    department VARCHAR(50)
+);
+
+-- Enrollments table tracks student registrations
+
+CREATE TABLE Enrollments (
+    enrollment_id INT PRIMARY KEY,
+    student_id INT,
+    course_id INT,
+    semester VARCHAR(20),
+
+    FOREIGN KEY (student_id)
+    REFERENCES Students(student_id),
+
+    FOREIGN KEY (course_id)
+    REFERENCES Courses(course_id)
+);
+
+-- Course assignments table maps courses to instructors
+
+CREATE TABLE Course_Assignments (
+    assignment_id INT PRIMARY KEY,
+    course_id INT,
+    instructor_id INT,
+
+    FOREIGN KEY (course_id)
+    REFERENCES Courses(course_id),
+
+    FOREIGN KEY (instructor_id)
+    REFERENCES Instructors(instructor_id)
+);
