@@ -70,7 +70,6 @@ Academic-Management-System/
 
 ├── README.md
 
-└── screenshots/
 
 ---
 
